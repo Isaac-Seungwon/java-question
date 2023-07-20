@@ -33,6 +33,15 @@ public class Q010 {
 		digit(98765);
 	}
 	
+	/*
+	public static void digit(int num) {
+		// 입력이 1자리, 2자리, 3자리, 4자리 이상인지 판단
+		String numberDigits = num > 10 ? (num > 100 ? (num > 1000 ? "" : "0") : "00") : "000";
+		
+		System.out.println(numberDigits + num);
+	}
+	*/
+	
 	public static void digit(int num) {
 		// 입력이 1자리, 2자리, 3자리, 4자리 이상인지 판단
 		String numberDigits = num > 10 ? num > 100 ? num > 1000 ? "" : "0" : "00" : "000";

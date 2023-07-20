@@ -39,5 +39,7 @@ public class Q001 {
 		
 		// 현재 나이 출력
 		System.out.printf("나이: %d세", currentAge);
+		
+		scan.close();
 	}
 }

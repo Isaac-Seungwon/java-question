@@ -63,6 +63,8 @@ public class Q011 {
 		System.out.println(multiply(num1, num2));
 		System.out.println(divide(num1, num2));
 		System.out.println(mod(num1, num2));
+		
+		scan.close();
 	}
 	
 	// String.valueOf

@@ -38,6 +38,8 @@ public class Q003 {
 		
 		System.out.printf("사각형의 넓이는 %d㎠입니다.\n", rectangleWidth * rectangleHeight);
 		System.out.printf("사각형의 둘레는 %d㎝입니다.", rectangleWidth * 2 + rectangleHeight * 2);
+		
+		scan.close();
 	}
 	
 }

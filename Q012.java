@@ -45,6 +45,8 @@ public class Q012 {
 		// 결과 출력
 		result = getNumber(n);
 		System.out.printf("입력하신 숫자 '%d'는(은) '%s'입니다.\n", n, result);
+		
+		scan.close();
 	}
 	
 	public static String getNumber(int num) {

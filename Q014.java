@@ -55,6 +55,8 @@ public class Q014 {
 		
 		// 총 소요 시간 출력
 		System.out.printf("총 소요 시간은 %d분 입니다.", getTime(inputStations, inputChange, inputTime));
+		
+		scan.close();
 	}
 	
 	public static int getTime(int station, int change, int time) {
@@ -66,9 +68,10 @@ public class Q014 {
 		
 		// 환승 소요 시간 계산
 		transferTime = time == 1 ? 3 : time == 2 ? 4 : 5;
+		// change = change * (time + 2);
 
 		// 환승 소요 시간 적용
-		timeRequired = timeRequired+ change * transferTime;
+		timeRequired = timeRequired + change * transferTime;
 		
 		return timeRequired;
 	}

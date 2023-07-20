@@ -52,6 +52,8 @@ public class Q013 {
 		
 		// 합격, 불합격 결과 출력
 		System.out.printf("%s입니다.", test(scoreKorean, scoreEnglish, scoreMathematic));
+		
+		scan.close();
 	}
 	
 	public static String test(int kor, int eng, int math) {
@@ -66,6 +68,8 @@ public class Q013 {
         
         // 합격, 불합격 판단
         String result = averageScore >= 60 ? isFailed == false ? "불합격" : "합격" : "불합격";
+        
+        // String result = averageScore < 60 ? "불합격" : (kor < 40 || eng < 40 || math < 40) ? "불합격" : "합격";
         
         return result;
 	}

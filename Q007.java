@@ -37,7 +37,12 @@ public class Q007 {
 		lowerCase = scan.nextLine();
 		
 		// 영어 소문자 검사(문자 코드값)
-		lowerCaseCode = (int)lowerCase.charAt(0);
+		lowerCaseCode = lowerCase.charAt(0);
+		
+		/*
+			lowerCaseCode = scan.nextLine().charAt(0);
+			위와 같이 입력과 문자 코드값 검사를 바로 할 수 있다.
+		*/
 		
 		// 소문자를 대문자로 변환
 		upperCaseCode = lowerCaseCode - 32;
@@ -47,5 +52,7 @@ public class Q007 {
 		
 		// 소문자를 대문자 변환한 결과 출력
 		System.out.printf("소문자 '%c'의 대문자는 '%c'입니다.", lowerCaseCode, upperCaseCode);
+		
+		scan.close();
 	}
 }

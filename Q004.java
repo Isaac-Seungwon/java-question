@@ -36,6 +36,8 @@ public class Q004 {
 		
 		// 섭씨 온도와 화씨 온도 출력
 		System.out.printf("섭씨 %.1f℃는 화씨 %.1f℃입니다.", celsiusTemperatureScale, fahrenheitTemperatureScale);
+		
+		scan.close();
 	}
 	
 }

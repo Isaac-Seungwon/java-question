@@ -40,6 +40,8 @@ public class Q015 {
 		
 		// 사과 개수 출력
 		System.out.printf("사과가 총 %d개 열렸습니다.", getApple(sunnyDay, foggyDay));
+		
+		scan.close();
 	}
 	
 	public static int getApple(int sunny, int foggy) {

@@ -31,10 +31,12 @@ public class Q006 {
 		incomeMonth = scan.nextInt();
 		
 		// 세금 계산
-		taxAmount = (double)incomeMonth * 0.033;
+		taxAmount = incomeMonth * 0.033;
 		
 		// 세후 금액, 세금 출력
 		System.out.printf("세후 금액(원): %,d원\n", incomeMonth - (int)taxAmount);
 		System.out.printf("세금(원): %,d원", (int)taxAmount);
+		
+		scan.close();
 	}
 }

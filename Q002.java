@@ -44,5 +44,7 @@ public class Q002 {
 		System.out.printf("%,.1f * %,.1f = %,.1f\n", num1, num2, num1 * num2);
 		System.out.printf("%,.1f / %,.1f = %,.1f\n", num1, num2, num1 / num2);
 		System.out.printf("%,.1f %% %,.1f = %,.1f\n", num1, num2, num1 = num2);
+		
+		scan.close();
 	}
 }
