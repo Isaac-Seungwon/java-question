@@ -62,6 +62,15 @@ public class Q032 {
 		
 		
 		// 주차 요금 출력
+		/*
+		if(out_total-in_total<=30) {
+	         System.out.println("무료 주차입니다");
+	      }else {
+	         money=(out_total-in_total-30)/10*2000;
+	         System.out.printf("주차 요금은 %d원입니다.",money);
+	      }
+		*/
+		
 		System.out.printf("주차 요금은 %,d원입니다.", parkingCharge);
 		
 		scan.close();

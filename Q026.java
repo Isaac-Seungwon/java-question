@@ -13,7 +13,7 @@ public class Q026 {
 		- 80 ~  89: B
 		- 70 ~  79: C
 		- 60 ~  69: D
-		-  0 ~   59: F
+		- 0 ~   59: F
 		- 유효성 검사를 하시오.(점수: 0 ~ 100점 이내)
 		
 		● 입력 1
@@ -37,7 +37,7 @@ public class Q026 {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		int kor = -1; // 국어 점수
+		int kor = 0; // 국어 점수
 		String score = ""; // 성적
 		
 		while (true) {

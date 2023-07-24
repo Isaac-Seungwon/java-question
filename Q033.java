@@ -54,7 +54,27 @@ public class Q033 {
 			}
 		}
 		else {
-			System.out.printf("%d년은 '윤년'입니다.", year);
+			System.out.printf("%d년은 '평년'입니다.", year);
 		}
+		
+		/*
+		if (year % 4 != 0) {
+         result = "평년";
+      }
+      else {
+         if (year % 100 != 0) {
+            result = "윤년";
+         }
+         else {
+            if (year % 400 != 0) {
+               result = "평년";
+            }
+            else {
+               result = "윤년";
+            }
+         }
+      }
+
+		 */
 	}
 }
