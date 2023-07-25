@@ -32,17 +32,17 @@ public class Q038 {
 		int sumEven = 0;	// 짝수 합계
 		int numOdd = 0;
 		
-		int N;		// 입력 횟수
+		int n;		// 입력 횟수
 		int num;	// 입력한 숫자
 		
 		
 		// 입력할 숫자 개수 입력
 		System.out.printf("입력 횟수: ");
-		N = scan.nextInt();
+		n = scan.nextInt();
 		
 		
 		// 숫자 입력, 짝수 홀수 검증
-		for (int i = 0; i < N; i++) {
+		for (int i = 0; i < n; i++) {
 			num = scan.nextInt();
 			
 			if (num % 2 == 0) {
@@ -56,7 +56,7 @@ public class Q038 {
 		
 		
 		// 짝수, 홀수의 개수와 합 출력
-		System.out.printf("짝수 %d개의 합: %d\n", N - numOdd, sumEven);
+		System.out.printf("짝수 %d개의 합: %d\n", n - numOdd, sumEven);
 		System.out.printf("홀수 %d개의 합: %d", numOdd, sumOdd);
 	}
 }
