@@ -33,5 +33,7 @@ public class Q037 {
 			sum = sum + i;
 		}
 		System.out.printf("%d ~ %d = %d", 1, num, sum);
+		
+		scan.close();
 	}
 }

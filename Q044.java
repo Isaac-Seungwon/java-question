@@ -56,5 +56,7 @@ public class Q044 {
 			System.out.printf("%s %d ", num[j] % 2 == 0 ? "+" : "-", num[j]);
 		}
 		System.out.printf("= %d", sum);
+		
+		scan.close();
 	}
 }

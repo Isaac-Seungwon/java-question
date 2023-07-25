@@ -1,5 +1,7 @@
 package com.test.question;
 
+import java.util.Scanner;
+
 public class Q035 {
 	public static void main(String[] args) {
 		/*
@@ -16,12 +18,17 @@ public class Q035 {
 		홍길동님 안녕하세요~
 		*/
 		
-		hello();
-		hello();
-		hello();
-	}
-	
-	public static void hello() {
-		System.out.println("홍길동님 안녕하세요~");
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("이름 : ");
+		String name = scan.next();
+		System.out.print("횟수 : ");
+		int num = scan.nextInt();
+		
+		for(int i = 0; i < num; i++) {
+			System.out.printf("%s님 안녕하세요~\n",name);
+		}
+		
+		scan.close();
 	}
 }

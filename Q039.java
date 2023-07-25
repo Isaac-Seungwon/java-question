@@ -39,5 +39,7 @@ public class Q039 {
 		
 		// 누적 합계 출력
 		System.out.printf("%d", sum);
+		
+		scan.close();
 	}
 }

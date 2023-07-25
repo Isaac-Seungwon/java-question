@@ -49,7 +49,7 @@ public class Q045 {
 
     public static int getclap(int num) {
     	int stac = 0; // 박수 스택
-    	int digit; // num을 10으로 나눈 나머지
+    	int digit; // num을 10으로 나눈 나머지 값
     	
     	// num이 0이 될 때까지 무한루프
         while (num != 0) {

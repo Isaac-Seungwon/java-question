@@ -44,7 +44,6 @@ public class Q040 {
 					, i
 					, i == endNum ? "=" : startNum % 2 == 1 ? i % 2 == 1 ? "-" : "+" : i % 2 == 0 ? "-" : "+");
 			
-			// 설명 불가능
 			if (startNum % 2 == 1) {
 				if (i % 2 == 1) {
 					sum = sum + i;
@@ -65,5 +64,7 @@ public class Q040 {
 		
 		// 누적 합계 출력
 		System.out.printf("%d", sum);
+		
+		scan.close();
 	}
 }

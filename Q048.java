@@ -28,18 +28,25 @@ public class Q048 {
 		System.out.printf("숫자 입력: ");
 		num = scan.nextInt();
 		
-		odd = odd + num % 10;
-		even = even + num / 10 % 10;
-		odd = odd + num / 100 % 10;
-		even = even + num / 1000 % 10;
-		odd = odd + num / 10000 % 10;
-		even = even + num / 100000 % 10;
-		odd = odd + num / 1000000 % 10;
-		even = even + num / 10000000 % 10;
-		odd = odd + num / 100000000 % 10;
-
-		System.out.printf("짝수의 합: %d\n", even);
-		System.out.printf("홀수의 합: %d\n", odd);
+		if (num <= 0 && num > 999999999) {
+			System.out.println("잘못된 범위입니다.");
+		}
+		else {
+			odd = odd + num % 10;
+			even = even + num / 10 % 10;
+			odd = odd + num / 100 % 10;
+			even = even + num / 1000 % 10;
+			odd = odd + num / 10000 % 10;
+			even = even + num / 100000 % 10;
+			odd = odd + num / 1000000 % 10;
+			even = even + num / 10000000 % 10;
+			odd = odd + num / 100000000 % 10;
+	
+			System.out.printf("짝수의 합: %d\n", even);
+			System.out.printf("홀수의 합: %d\n", odd);
+		}
+		
+		scan.close();
 		
 		/*
 		System.out.printf("%d\n", num);

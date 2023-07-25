@@ -48,6 +48,8 @@ public class Q047 {
 			System.out.printf("\n계속하시려면 엔터를 입력하세요.\n");
 			scan.nextLine();
 			scan.nextLine();
+			
+			scan.close();
 		}
 	}
 }

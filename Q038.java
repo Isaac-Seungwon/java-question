@@ -58,5 +58,7 @@ public class Q038 {
 		// 짝수, 홀수의 개수와 합 출력
 		System.out.printf("짝수 %d개의 합: %d\n", n - numOdd, sumEven);
 		System.out.printf("홀수 %d개의 합: %d", numOdd, sumOdd);
+		
+		scan.close();
 	}
 }

@@ -42,5 +42,7 @@ public class Q036 {
 		for (int i = startNum; i <= endNum; i += plus) {
 			System.out.println(i);
 		}
+		
+		scan.close();
 	}
 }

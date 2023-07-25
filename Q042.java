@@ -22,7 +22,7 @@ public class Q042 {
 		int inputYear;	// 입력 날짜(년)
 		int inputMonth;	// 입력 날짜(월)
 		int inputDay;	// 입력 날짜(일)
-		String day;		// 요일
+		String day = "";	// 요일
 		
 		
 		// 오늘 날짜 입력 (년, 월, 일)
@@ -37,13 +37,13 @@ public class Q042 {
 		
 		
 		// 입력한 월의 전 월까지 누적
-		for (int month = 1; month <= inputMonth; month++) {
+		for (int month = 1; month < inputMonth; month++) {
 			switch(month) {
 			case 1: case 3: case 5: case 7: case 8: case 10: case 12:
 				sum = sum + 31;
 				break;
 			case 2:
-				sum = isLeafYear(inputYear) ? 29 : 28;
+				sum += isLeafYear(inputYear) ? 29 : 28;
 				break;
 			case 4: case 6: case 9: case 11:
 				sum = sum + 30;
@@ -213,6 +213,8 @@ public class Q042 {
 		}
 		
 		System.out.printf("%d년 %d월 %d일은 %,d일째 되는 날이고 %s입니다.", inputYear, inputMonth, inputDay, sum, day);
+		
+		scan.close();
 	}
 	
 	public static boolean isLeafYear(int year) {
