@@ -32,10 +32,9 @@ public class Q068 {
 		
 		int[] list = new int [10];
 		int[] copy;
-		int temp;
 		int erase; // 삭제 위치
 		
-		// 배열 값 생성
+		// 배열 값 할당 (0~10)
 		for (int i = 0; i < 10; i++) {
 			list[i] = (int)(Math.random() * 10) + 0;
 		}
@@ -43,20 +42,22 @@ public class Q068 {
 		// 원본 배열 copy
 		copy = Arrays.copyOfRange(list, 0, list.length);
 		
-		
 		// 삽입 위치 입력
 		System.out.printf("삭제 위치: ");
 		erase = scan.nextInt();
-
 		
-		// 삭제할 위치까지 앞으로 옮김
+		// 삭제할 위치까지 숫자를 앞으로 옮김
 		for (int i = erase; i < 9; i++) {
 			list[i] = list[i + 1];
+			/*
+			insert가 0일 경우 i: 0 1 2 3 4 5 6 7 8
+			insert가 5일 경우 i: 5 6 7 8
+			insert가 9일 경우 i:
+			*/
 		}
 		
-		// 리스트의 마지막 값에 0 삽입
-		list[9] = 0;
-		
+		// 배열의 마지막 값으로 0 할당
+		list[list.length - 1] = 0;
 		
 		// 출력
 		System.out.printf("원본: %s\n", Arrays.toString(copy));

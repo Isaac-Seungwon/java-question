@@ -20,8 +20,7 @@ public class Q064 {
 		int max = 0;	// 최댓값
 		int min = 20;	// 최솟값
 		
-		
-		// 난수 20개 생성
+		// 난수 20개 값 할당 (1~20)
 		for (int i = 0; i < 20; i++) {
 			randomList[i] = (int)(Math.random() * 20) + 1;
 			

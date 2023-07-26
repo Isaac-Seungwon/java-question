@@ -37,7 +37,7 @@ public class Q061 {
 			nums[i] = scan.nextInt();
 		}
 		
-		// 숫자를 역순으로 출력
+		// 숫자를 입력한 역순으로 출력
 		for (int i = 4; i > -1; i--) {
 			System.out.printf("nums[%d] = %d\n", i, nums[i]);
 		}

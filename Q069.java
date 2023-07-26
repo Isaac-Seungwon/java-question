@@ -26,37 +26,37 @@ public class Q069 {
 		
 		int number; // 숫자 개수
 		
-		
 		// 난수 개수 입력
 		System.out.printf("난수 개수: ");
 		number = scan.nextInt();
-		scan.skip("\r\n");
+		scan.skip("\r\n"); // 버퍼 개행 제거
 		
-		
-		// 학생 수 만큼 배열 생성
+		// 난수 개수만큼 배열 생성
 		int[] list = new int[number];
 		int[] listPlus = new int[number / 2];
 
-		
-		// 배열 값 생성
+		// 배열 값 할당 (1~9)
 		for (int i = 0; i < list.length; i++) {
 			list[i] = (int)(Math.random() * 9) + 1;
 		}
 		
-		// 순차적으로 2개씩 덧셈 연산
+		// 순차적으로 숫자 2개씩 덧셈 연산
 		for (int i = 0; i < list.length; i += 2) {
-			if(number % 2 == 1 && list.length - 1 == i)
-			{
-				// 난수 개수가 홀수이며, 마지막 1개 값을 계산하려고 할 경우 탈출
+			if(number % 2 == 1 && i == list.length - 1){
+				// java.lang.ArrayIndexOutOfBoundsException 오류 발생 방지
+				// 난수 개수가 홀수 && 덧셈할 수 있는 난수가 마지막 1개만 남음
 				break;
 			}
-			listPlus[(int)(i / 2)] = list[i] + list[i + 1];
+			
+			// 숫자 2개씩 덧셈
+			listPlus[i / 2] = list[i] + list[i + 1];
 		}
 
-		
 		// 출력
 		System.out.printf("원본: %s\n", Arrays.toString(list));
 		System.out.printf("결과: %s\n", Arrays.toString(listPlus));
+		
+		scan.close();
 	}
 }
 

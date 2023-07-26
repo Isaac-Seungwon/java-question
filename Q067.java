@@ -34,18 +34,16 @@ public class Q067 {
 		
 		int[] list = new int [10];
 		int[] copy;
-		int temp;
 		int insert; // 삽입 위치
 		int number; // 삽입할 값
 		
-		// 배열 값 생성
+		// 배열 값 할당 (0~10)
 		for (int i = 0; i < 10; i++) {
 			list[i] = (int)(Math.random() * 10) + 0;
 		}
 		
 		// 원본 배열 copy
 		copy = Arrays.copyOfRange(list, 0, list.length);
-		
 		
 		// 삽입 위치 입력
 		System.out.printf("삽입 위치: ");
@@ -54,17 +52,19 @@ public class Q067 {
 		// 삽입할 값 입력
 		System.out.printf("값: ");
 		number = scan.nextInt();
-
 		
-		// 삽입할 위치까지 뒤로 옮김
+		// 삽입할 위치까지 숫자를 뒤로 옮김
 		for (int i = 8; i > insert - 1; i--) {
-			temp = list[i];
-			list[i + 1] = temp;
+			list[i + 1] = list[i];
+			/*
+			insert가 0일 경우 i: 8 7 6 5 4 3 2 1 0
+			insert가 5일 경우 i: 8 7 6 5
+			insert가 9일 경우 i:
+			*/
 		}
 		
-		// 삽입할 위치에 삽입할 값 삽입
+		// 삽입할 위치에 삽입할 값 할당
 		list[insert] = number;
-		
 		
 		// 출력
 		System.out.printf("원본: %s\n", Arrays.toString(copy));

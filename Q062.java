@@ -38,7 +38,7 @@ public class Q062 {
 		// 학생 수 입력
 		System.out.printf("학생 수: ");
 		studentNum = scan.nextInt();
-		scan.skip("\r\n");
+		scan.skip("\r\n"); // 입력에 개행 제거
 		
 		// 학생 수 만큼 배열 생성
 		String[] student = new String[studentNum];

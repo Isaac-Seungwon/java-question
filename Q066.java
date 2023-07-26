@@ -19,10 +19,9 @@ public class Q066 {
 		int[] lotto = new int [6]; // 랜덤 6개
 		boolean loop = true; // 중복 검사
 		
-		
 		// 로또 번호 생성 루프
 		while (loop) {
-			// 난수 6개 생성
+			// 난수 6개 값 할당 (1~45)
 			for (int i = 0; i < 6; i++) {
 				lotto[i] = (int)(Math.random() * 45) + 1;
 			}
@@ -32,7 +31,7 @@ public class Q066 {
 			for (int i = 0; i < 6; i++) {
 				for (int j = 0; j < 6; j++) {
 					if (i != j && lotto[i] == lotto[j]){
-						// 자기 자신을 제외한 숫자와 비교해서 같을 경우 루프
+						// 중복 발생: 자기 자신을 제외한 숫자와 비교해서 같을 경우 루프
 						loop = true;
 					}
 				}
@@ -46,6 +45,7 @@ public class Q066 {
 		System.out.printf("%s\n", dump(lotto));
 	}
 	
+	// int 배열을 매개변수로 받아 내용을 문자열로 반환하는 메소드
 	public static String dump(int[] list) {
 		return Arrays.toString(list);
 	}
