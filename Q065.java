@@ -28,10 +28,12 @@ public class Q065 {
 		int maxRange; // 최대 범위
 		int minRange; // 최소 범위
 		
+		
 		// 난수 20개 생성
 		for (int i = 0; i < 20; i++) {
 			randomList[i] = (int)(Math.random() * 20) + 1;
 		}
+		
 		
 		// 최대 범위 입력
 		System.out.printf("최대 범위: ");
@@ -40,6 +42,7 @@ public class Q065 {
 		// 최소 범위 입력
 		System.out.printf("최소 범위: ");
 		minRange = scan.nextInt();
+		
 		
 		// 원본 출력
 		System.out.print("원본: ");
@@ -54,7 +57,7 @@ public class Q065 {
 				System.out.printf("%d, ", randomList[i]);
 			}
 		}
+		
+		scan.close();
 	}
-	
-	
 }

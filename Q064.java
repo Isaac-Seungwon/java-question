@@ -17,27 +17,31 @@ public class Q064 {
 		*/
 		
 		int[] randomList = new int [20];
-		int max = 0;
-		int min = 20;
+		int max = 0;	// 최댓값
+		int min = 20;	// 최솟값
+		
 		
 		// 난수 20개 생성
 		for (int i = 0; i < 20; i++) {
 			randomList[i] = (int)(Math.random() * 20) + 1;
 			
-			// 최댓값
+			// 최댓값 연산
 			if (max < randomList[i]) {
 				max = randomList[i];
 			}
-			// 최솟값
+			// 최솟값 연산
 			if (min > randomList[i]) {
 				min = randomList[i];
 			}
 		}
 		
+		// 원본 출력
 		System.out.print("원본: ");
 		for (int i = 0; i < 20; i++) {
 			System.out.printf("%d, ", randomList[i]);
 		}
+		
+		// 최댓값, 최솟값 출력
 		System.out.printf("\n최댓값: %d\n", max);
 		System.out.printf("최솟값: %d\n", min);
 	}

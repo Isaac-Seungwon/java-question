@@ -59,6 +59,4 @@ public class Q062 {
 		
 		scan.close();
 	}
-	
-	
 }

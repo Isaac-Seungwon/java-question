@@ -37,6 +37,7 @@ public class Q063 {
 		System.out.printf("nums = %s\n", result);
 	}
 	
+	// int 배열을 매개변수로 받아 내용을 문자열로 반환하는 메소드
 	public static String dump(int[] list) {
 		return Arrays.toString(list);
 	}
