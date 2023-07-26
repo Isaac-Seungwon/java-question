@@ -58,8 +58,6 @@ public class Q069 {
 		System.out.printf("원본: %s\n", Arrays.toString(list));
 		System.out.printf("결과: %s\n", Arrays.toString(listPlus));
 	}
-	
-	
 }
 
 /*
@@ -73,7 +71,6 @@ int[] listPlus = new int[number / 2];
 for (int i = 0; i < 10; i++) {
 	list[i] = (int)(Math.random() * 9) + 1;
 }
-
 
 for (int i = 0; i < list.length; i += 2) {
 	listPlus[i / 2] = list[i] + list[i + 1];
