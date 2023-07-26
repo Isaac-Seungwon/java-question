@@ -17,10 +17,12 @@ public class Q066 {
 		*/
 		
 		int[] lotto = new int [6]; // 랜덤 6개
-		boolean loop = true;
+		boolean loop = true; // 중복 검사
 		
+		
+		// 로또 번호 생성 루프
 		while (loop) {
-			// 로또 번호 생성
+			// 난수 6개 생성
 			for (int i = 0; i < 6; i++) {
 				lotto[i] = (int)(Math.random() * 45) + 1;
 			}
