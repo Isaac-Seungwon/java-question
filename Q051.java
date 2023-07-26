@@ -52,7 +52,7 @@ public class Q051 {
 			}
 			
 			// '*' 출력
-			for (int k = 0; k < 1 + i * 2; k++) {
+			for (int k = 0; k < i * 2 + 1; k++) {
 				System.out.printf("*");
 			}
 			// (조건) k <= i -> k < 1 + i

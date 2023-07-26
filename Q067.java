@@ -1,0 +1,73 @@
+package com.test.question;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Q067 {
+	public static void main(String[] args) {
+		/*
+		● 요구사항
+		배열에 요소를 삽입하시오.
+		
+		● 조건
+		- 배열 길이: 10
+		- 마지막 요소는 우측으로 옮겨질 공간이 없으면 삭제된다.
+		
+		● 입력 1
+		삽입 위치: 2 
+		값: 100 
+		
+		● 출력 1
+		원본: [5, 6, 1, 3, 2, 0, 0, 0, 0, 0]
+		결과: [5, 6, 100, 1, 3, 2, 0, 0, 0, 0]
+		
+		● 입력 2
+		삽입 위치: 5 
+		값: 100 
+		
+		● 출력 2
+		원본: [5, 6, 1, 3, 2, 8, 7, 4, 10, 9]
+		결과: [5, 6, 1, 3, 2, 100, 8, 7, 4, 10]
+		*/
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int[] list = new int [10];
+		int[] copy;
+		int temp;
+		int insert; // 삽입 위치
+		int number; // 삽입할 값
+		
+		// 배열 값 생성
+		for (int i = 0; i < 10; i++) {
+			list[i] = (int)(Math.random() * 10) + 0;
+		}
+		
+		// 원본 배열 copy
+		copy = Arrays.copyOfRange(list, 0, list.length);
+		
+		
+		// 삽입 위치 입력
+		System.out.printf("삽입 위치: ");
+		insert = scan.nextInt();
+		
+		// 삽입할 값 입력
+		System.out.printf("값: ");
+		number = scan.nextInt();
+
+		
+		// 삽입할 위치까지 뒤로 옮김
+		for (int i = 8; i > insert - 1; i--) {
+			temp = list[i];
+			list[i + 1] = temp;
+		}
+		
+		// 삽입할 위치에 삽입할 값 삽입
+		list[insert] = number;
+		
+		
+		// 출력
+		System.out.printf("원본: %s\n", Arrays.toString(copy));
+		System.out.printf("결과: %s\n", Arrays.toString(list));
+	}
+}

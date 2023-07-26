@@ -31,9 +31,9 @@ public class Q053 {
 		6 x 9 = 54      7 x 9 = 63      8 x 9 = 72      9 x 9 = 81
 		*/
 		
-		for (int ㅑ = 1; ㅑ <= 9; ㅑ++) {
+		for (int ㅑ = 1; ㅑ < 10; ㅑ++) {
 			
-			for (int ㅓ = 2; ㅓ <= 5; ㅓ++) {
+			for (int ㅓ = 2; ㅓ < 6; ㅓ++) {
 				System.out.printf("%d x %d = %2d\t", ㅓ, ㅑ, ㅑ * ㅓ);
 			}
 			System.out.println();
@@ -41,9 +41,9 @@ public class Q053 {
 		
 		System.out.println();
 		
-		for (int ㅑ = 1; ㅑ <= 9; ㅑ++) {
+		for (int ㅑ = 1; ㅑ < 10; ㅑ++) {
 			
-			for (int ㅏ = 6; ㅏ <= 9; ㅏ++) {
+			for (int ㅏ = 6; ㅏ < 10; ㅏ++) {
 				System.out.printf("%d x %d = %2d\t", ㅏ, ㅑ, ㅑ * ㅏ);
 			}
 			System.out.println();

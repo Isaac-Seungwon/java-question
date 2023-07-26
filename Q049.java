@@ -59,5 +59,7 @@ public class Q049 {
 			
 			System.out.println(); // 개행
 		}
+		
+		scan.close();
 	}
 }
