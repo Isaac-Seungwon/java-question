@@ -49,16 +49,14 @@ public class Q056 {
 
 	// 약수 검증 메소드
 	private static String getdevisor(int num, String devisorList) {
+		devisorList = "";
+		
 		for (int i = 1; i <= num; i++) {
-			devisorList = "";
-					
-			for (int j = 1; j <= num; j++) {
-				// 약수 계산
-				if (i % j == 0) {
-					devisorList = devisorList + j + ", ";
-				}
-			}
-		}
+			// 약수 계산
+    		if (num % i == 0) {
+    			devisorList += i + ", ";
+    		}
+    	}
 		
 		return devisorList;
 	}

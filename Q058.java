@@ -22,16 +22,16 @@ public class Q058 {
 		int sum = 0; // 누적 합계
 		int j; // j는 출력해야 하므로 main메소드의 지역변수로 선언
 		
-		
 		// 실행을 10번 반복
 		for (int i = 1; i <= 100; i+= 10) {
+			sum = 0; // 합계 초기화
+			
 			for (j = i; j < i + 10; j++) {
 				sum = sum + j;
 			}
 
 			// 출력
 			System.out.printf("%2d ~ %3d: %3d\n", i, j - 1, sum);
-			sum = 0;
 		}
 	}
 }

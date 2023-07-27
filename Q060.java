@@ -16,9 +16,8 @@ public class Q060 {
 		
 		int sum = 0; // 피보나치 수열 누적 합계
 		
-		
         for (int i = 1; i < 100; i++) {
-            // 마지막 숫자가 100 초과
+            // 수열의 숫자가 100 초과
             if (getFibonacci(i) > 100) {
             	// 피보나치 수열 누적 합계 출력
                 System.out.printf(" = %d", sum);
@@ -33,13 +32,44 @@ public class Q060 {
         }
 	}
 	
+	/*
+	int num = 1;
+	int sum = 1;
+	// num에 더해줄 값 > num - temp
+	int temp = 0;
+	      
+	System.out.print(num + " + ");
+	      
+	// 피보나치 수열
+	while (num < 100) {
+		System.out.print(num + " + ");
+		sum += num;
+		temp = num - temp;
+		num += temp;
+	}
+	System.out.println("= " + sum);
+	*/
+	
+	/*
+	피보나치 수열 공식: 이전 두 항의 값을 더하여 다음 항을 만들어내는 수열
+	Fn = Fn-1 + Fn-2
+	
+	F(0) = 0
+	F(1) = 1
+	F(2) = F(1) + F(0) = 1 + 0 = 1
+	F(3) = F(2) + F(1) = 1 + 1 = 2
+	F(4) = F(3) + F(2) = 2 + 1 = 3
+	F(5) = F(4) + F(3) = 3 + 2 = 5
+	
+	이전 항과 두 번째 이전항을 더해가며 피보나치 수열 완성
+	*/
+	
 	// 피보나치 수열 계산
     public static int getFibonacci(int n) {
 
     	int result = 0; // 피보나치 수열 계산 결과
     	int num1 = 0; // 이전 항
     	int num2 = 1; // 두 번째 이전 항
-    	
     	
     	// 0과 1일 경우 그대로 출력
     	if (n == 0 || n == 1) {
@@ -51,20 +81,6 @@ public class Q060 {
     			result = num1 + num2;
     			num1 = num2;
     			num2 = result;
-    			
-    			/*
-    	    	피보나치 수열 공식: 이전 두 항의 값을 더하여 다음 항을 만들어내는 수열
-    	    	Fn = Fn-1 + Fn-2
-    	    	
-    	    	F(0) = 0
-    			F(1) = 1
-    			F(2) = F(1) + F(0) = 1 + 0 = 1
-    			F(3) = F(2) + F(1) = 1 + 1 = 2
-    			F(4) = F(3) + F(2) = 2 + 1 = 3
-    			F(5) = F(4) + F(3) = 3 + 2 = 5
-    			
-    			이전 항과 두 번째 이전항을 더해가며 피보나치 수열 완성
-    	    	*/
     		}
     		
     		return result;

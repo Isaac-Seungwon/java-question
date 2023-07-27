@@ -18,7 +18,6 @@ public class Q059 {
 		int result = 1; // 누적 합계
 		boolean loop = true; // 루프 변수
 		
-		
 		while (loop) {
 			// 스택의 누적 합계 출력
 			System.out.printf("%d + ", sum);
