@@ -21,7 +21,7 @@ public class Q064 {
 		int min = 20;	// 최솟값
 		
 		// 난수 20개 값 할당 (1~20)
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < randomList.length; i++) {
 			randomList[i] = (int)(Math.random() * 20) + 1;
 			
 			// 최댓값 연산
@@ -36,7 +36,7 @@ public class Q064 {
 		
 		// 원본 출력
 		System.out.print("원본: ");
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < randomList.length; i++) {
 			System.out.printf("%d, ", randomList[i]);
 		}
 		

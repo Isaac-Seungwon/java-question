@@ -38,7 +38,7 @@ public class Q067 {
 		int number; // 삽입할 값
 		
 		// 난수 10개 값 할당 (0~10)
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < list.length; i++) {
 			list[i] = (int)(Math.random() * 10) + 0;
 		}
 		
@@ -54,7 +54,7 @@ public class Q067 {
 		number = scan.nextInt();
 		
 		// 삽입할 위치까지 숫자를 뒤로 옮김
-		for (int i = 8; i > insert - 1; i--) {
+		for (int i = list.length - 2; i > insert - 1; i--) {
 			list[i + 1] = list[i];
 			/*
 			insert가 0일 경우 i: 8 7 6 5 4 3 2 1 0

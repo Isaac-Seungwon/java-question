@@ -35,7 +35,7 @@ public class Q068 {
 		int erase; // 삭제 위치
 		
 		// 난수 10개 값 할당 (0~10)
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < list.length; i++) {
 			list[i] = (int)(Math.random() * 10) + 0;
 		}
 		
@@ -47,7 +47,7 @@ public class Q068 {
 		erase = scan.nextInt();
 		
 		// 삭제할 위치까지 숫자를 앞으로 옮김
-		for (int i = erase; i < 9; i++) {
+		for (int i = erase; i < list.length - 1; i++) {
 			list[i] = list[i + 1];
 			/*
 			insert가 0일 경우 i: 0 1 2 3 4 5 6 7 8

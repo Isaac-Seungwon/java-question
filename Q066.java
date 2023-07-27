@@ -22,14 +22,14 @@ public class Q066 {
 		// 로또 번호 생성 루프
 		while (loop) {
 			// 난수 6개 값 할당 (1~45)
-			for (int i = 0; i < 6; i++) {
+			for (int i = 0; i < lotto.length; i++) {
 				lotto[i] = (int)(Math.random() * 45) + 1;
 			}
 			
 			// 로또 번호 중복 검사
 			loop = false;
-			for (int i = 0; i < 6; i++) {
-				for (int j = 0; j < 6; j++) {
+			for (int i = 0; i < lotto.length; i++) {
+				for (int j = 0; j < lotto.length; j++) {
 					if (i != j && lotto[i] == lotto[j]){
 						// 중복 발생: 자기 자신을 제외한 숫자와 비교해서 같을 경우 루프
 						loop = true;

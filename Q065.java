@@ -29,7 +29,7 @@ public class Q065 {
 		int minRange; // 최소 범위
 		
 		// 난수 20개 값 할당 (1~20)
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < randomList.length; i++) {
 			randomList[i] = (int)(Math.random() * 20) + 1;
 		}
 		
@@ -43,13 +43,13 @@ public class Q065 {
 		
 		// 원본 출력
 		System.out.print("원본: ");
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < randomList.length; i++) {
 			System.out.printf("%d, ", randomList[i]);
 		}
 		
 		// 결과 출력
 		System.out.print("\n결과: ");
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < randomList.length; i++) {
 			if (randomList[i] <= maxRange && randomList[i] >= minRange) {
 				System.out.printf("%d, ", randomList[i]);
 			}
