@@ -46,7 +46,7 @@ public class Q066 {
 	}
 	
 	// int 배열을 매개변수로 받아 내용을 문자열로 반환하는 메소드
-	public static String dump(int[] list) {
+	private static String dump(int[] list) {
 		return Arrays.toString(list);
 	}
 }
