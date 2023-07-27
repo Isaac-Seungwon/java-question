@@ -29,13 +29,13 @@ public class Q069 {
 		// 난수 개수 입력
 		System.out.printf("난수 개수: ");
 		number = scan.nextInt();
-		scan.skip("\r\n"); // 버퍼 개행 제거
+		// scan.skip("\r\n"); // 버퍼 개행 제거
 		
 		// 난수 개수만큼 배열 생성
 		int[] list = new int[number];
 		int[] listPlus = new int[number / 2];
 
-		// 배열 값 할당 (1~9)
+		// 난수 값 할당 (1~9)
 		for (int i = 0; i < list.length; i++) {
 			list[i] = (int)(Math.random() * 9) + 1;
 		}

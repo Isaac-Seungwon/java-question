@@ -32,12 +32,12 @@ public class Q067 {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		int[] list = new int [10];
+		int[] list = new int [10]; // 난수 10개
 		int[] copy;
 		int insert; // 삽입 위치
 		int number; // 삽입할 값
 		
-		// 배열 값 할당 (0~10)
+		// 난수 10개 값 할당 (0~10)
 		for (int i = 0; i < 10; i++) {
 			list[i] = (int)(Math.random() * 10) + 0;
 		}

@@ -16,7 +16,7 @@ public class Q066 {
 		[1, 5, 23, 36, 37, 41]
 		*/
 		
-		int[] lotto = new int [6]; // 랜덤 6개
+		int[] lotto = new int [6]; // 난수 6개
 		boolean loop = true; // 중복 검사
 		
 		// 로또 번호 생성 루프

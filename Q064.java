@@ -16,7 +16,7 @@ public class Q064 {
 		최솟값: 3
 		*/
 		
-		int[] randomList = new int [20];
+		int[] randomList = new int [20]; // 난수 20개
 		int max = 0;	// 최댓값
 		int min = 20;	// 최솟값
 		
