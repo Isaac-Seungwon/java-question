@@ -63,6 +63,7 @@ public class Q056 {
 				}
 			}
 		}
+		
 		return aliquotList;
 	}
 	
