@@ -1,5 +1,7 @@
 package com.test.question;
 
+import java.util.Scanner;
+
 public class Q086 {
 	public static void main(String[] args) {
 		/*
@@ -22,10 +24,25 @@ public class Q086 {
 		결과: 1,234,567
 		*/
 		
+		Scanner scan = new Scanner(System.in);
 		
+		String number; // 입력할 숫자
 		
+		// 숫자 입력
+		System.out.print("숫자: ");
+		number = scan.nextLine();
+        StringBuilder result = new StringBuilder(number);
 		
+        // 필요한 ',' 개수 계산
+        int numCommas = (number.length() - 1) / 3;
+        
+        // 숫자 3자리마다 ',' 삽입
+        for (int i = 1; i <= numCommas; i++) {
+            int position = number.length() - i * 3;
+            result.insert(position, ",");
+        }
+        
+        // Print the result
+        System.out.println("결과: " + result);
 	}
-	
-	
 }

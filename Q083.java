@@ -44,7 +44,7 @@ public class Q083 {
 
 		// 파일명 입력
 		for (int i = 0; i<file.length; i++) {
-			System.out.printf("파일명: ");
+			System.out.print("파일명: ");
 			file[i] = scan.nextLine();
 			
 			// 파일 확장자 추출
