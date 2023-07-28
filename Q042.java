@@ -217,7 +217,7 @@ public class Q042 {
 		scan.close();
 	}
 	
-	public static boolean isLeafYear(int year) {
+	private static boolean isLeafYear(int year) {
 	/*
 	● 윤년, 평년 조건
 	a. 년도를 4로 나눈다.

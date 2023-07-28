@@ -47,7 +47,7 @@ public class Q045 {
         scan.close();
     }
 
-    public static int getclap(int num) {
+    private static int getclap(int num) {
     	int stac = 0; // 박수 스택
     	int digit; // num을 10으로 나눈 나머지 값
     	

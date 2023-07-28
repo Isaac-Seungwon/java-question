@@ -84,7 +84,7 @@ public class Q030 {
         
         // 대문자를 소문자로 변환
         changeEnglish = Character.toLowerCase(inputEnglish);
-		*/
+        */
         
         scan.close();
     }

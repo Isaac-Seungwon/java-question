@@ -18,7 +18,6 @@ public class Q055 {
 		int aliquot = 0; // 약수 합계 누적
 		String aliquotList; // 약수 리스트
 		
-		
 		// 1 ~ 100 사이의 수
 		for (int i = 1; i <= 100; i++) {
 			aliquotList = "";

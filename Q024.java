@@ -29,14 +29,13 @@ public class Q024 {
 		// 객체 생성
 		Scanner scan = new Scanner(System.in);
 		
-		int orderHour;		// 음식을 받기 원하는 시각(시)
-		int orderMinute;	// 음식을 받기 원하는 시각(분)
+		int orderHour; // 음식을 받기 원하는 시각(시)
+		int orderMinute; // 음식을 받기 원하는 시각(분)
 		boolean isorderTime; // 음식을 받기 원하는 시각 판단
 		
 		int jjajangmyeonRequiredTime = 10; // 짜장면 소요 시간
 		int chickenRequiredTime = 18; // 치킨 소요 시간
 		int pizzaRequiredTime = 25; // 피자 소요 시간
-		
 		
 		// 음식을 받기 원하는 시각 입력
 		System.out.println("음식을 받기 원하는 시각");
@@ -45,10 +44,8 @@ public class Q024 {
 		System.out.printf("분: ");
 		orderMinute = scan.nextInt();
 
-		
 		// 음식을 받기 원하는 시각이 오후 11시 이전인지 판단
 		isorderTime = orderHour < 23 ? true : false;
-		
 		
 		// 음식 주문 시간 계산 및 출력
         if (isorderTime) {
@@ -69,11 +66,11 @@ public class Q024 {
         }
 	}
 
-	public static int food(int hour) {
+	private static int food(int hour) {
 		return hour - 1;
 	}
 
-	public static int food(int minute, int deliveredTime) {
+	private static int food(int minute, int deliveredTime) {
 		return minute + 60 - deliveredTime;
 	}
 }

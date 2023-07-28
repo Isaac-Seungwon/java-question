@@ -32,15 +32,15 @@ public class Q048 {
 			System.out.println("잘못된 범위입니다.");
 		}
 		else {
-			odd = odd + num % 10;
-			even = even + num / 10 % 10;
-			odd = odd + num / 100 % 10;
-			even = even + num / 1000 % 10;
-			odd = odd + num / 10000 % 10;
-			even = even + num / 100000 % 10;
-			odd = odd + num / 1000000 % 10;
-			even = even + num / 10000000 % 10;
-			odd = odd + num / 100000000 % 10;
+			odd += num % 10;
+			even += num / 10 % 10;
+			odd += num / 100 % 10;
+			even += num / 1000 % 10;
+			odd += num / 10000 % 10;
+			even += num / 100000 % 10;
+			odd += num / 1000000 % 10;
+			even += num / 10000000 % 10;
+			odd += num / 100000000 % 10;
 	
 			System.out.printf("짝수의 합: %d\n", even);
 			System.out.printf("홀수의 합: %d\n", odd);
@@ -59,6 +59,16 @@ public class Q048 {
 		System.out.printf("%d\n", num / 1000000 % 10);
 		System.out.printf("%d\n", num / 10000000 % 10);
 		System.out.printf("%d\n", num / 100000000 % 10);
+		
+		odd = odd + num % 10;
+			even = even + num / 10 % 10;
+			odd = odd + num / 100 % 10;
+			even = even + num / 1000 % 10;
+			odd = odd + num / 10000 % 10;
+			even = even + num / 100000 % 10;
+			odd = odd + num / 1000000 % 10;
+			even = even + num / 10000000 % 10;
+			odd = odd + num / 100000000 % 10;
 		*/
 	}
 }

@@ -44,7 +44,6 @@ public class Q029 {
 		char operator; // 연산자
 		double result; // 연산 결과 값
 		
-
 		// 첫 번째 숫자 입력
 		System.out.print("첫번째 숫자: ");
 		num1 = scan.nextInt();

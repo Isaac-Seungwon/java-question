@@ -32,7 +32,7 @@ public class Q009 {
 		System.out.printf("고객: %s\n", result);
 	}
 	
-	public static String getName(String name) {
+	private static String getName(String name) {
 		return name + "님";
 	}
 }

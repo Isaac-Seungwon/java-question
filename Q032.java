@@ -34,7 +34,6 @@ public class Q032 {
 		int parkingDuration;	// 총 주차 시간(분)
 		int parkingCharge;		// 주차 요금(원)
 		
-		
 		// 들어온 시간 입력
 		System.out.println("[들어온 시간]");
 		System.out.printf("시: "); 
@@ -52,26 +51,18 @@ public class Q032 {
 		System.out.printf("분: ");  
 		outParkingMinute = scan.nextInt();
 		
-		
 		// 총 주차 시간 계산(분)
 		parkingDuration = (outParkingHour * 60 + outParkingMinute) - (inParkingHour * 60 + inParkingMinute);
 
-		
 		// 주차 요금 계산(원)
 		parkingCharge = ((parkingDuration - 30) / 10) * 2000;
 		
-		
 		// 주차 요금 출력
-		/*
-		if(out_total-in_total<=30) {
-	         System.out.println("무료 주차입니다");
-	      }else {
-	         money=(out_total-in_total-30)/10*2000;
-	         System.out.printf("주차 요금은 %d원입니다.",money);
-	      }
-		*/
-		
-		System.out.printf("주차 요금은 %,d원입니다.", parkingCharge);
+		if(parkingDuration <= 30) {
+			System.out.println("무료 주차입니다");
+		}else {
+			System.out.printf("주차 요금은 %,d원입니다.", parkingCharge);
+		}
 		
 		scan.close();
 	}

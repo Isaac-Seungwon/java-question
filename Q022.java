@@ -61,10 +61,12 @@ public class Q022 {
 		dateSet(coupleDate, coupleYear, coupleMonth, coupleDay, 300);
 		dateSet(coupleDate, coupleYear, coupleMonth, coupleDay, 500);
 		dateSet(coupleDate, coupleYear, coupleMonth, coupleDay, 1000);
+		
+		scan.close();
 	}
 	
 	// 만난 날짜 초기화 및 기념일 출력 메소드
-	public static void dateSet(Calendar date, int year, int month, int day, int addDay) {
+	private static void dateSet(Calendar date, int year, int month, int day, int addDay) {
 		// 만난 날짜 초기화
 		date.set(year, month - 1, day);
 		

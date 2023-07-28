@@ -64,13 +64,13 @@ public class Q013 {
 		isFailed = kor > 40 ? eng > 40 ? math > 40 ? true : false : false : false;
 
 		// 과목 평균 계산
-	        averageScore = (kor + eng + math) / 3;
-	        
-	        // 합격, 불합격 판단
-	        String result = averageScore >= 60 ? isFailed == false ? "불합격" : "합격" : "불합격";
-	        
-	        // String result = averageScore < 60 ? "불합격" : (kor < 40 || eng < 40 || math < 40) ? "불합격" : "합격";
-	        
-	        return result;
+        averageScore = (kor + eng + math) / 3;
+        
+        // 합격, 불합격 판단
+        String result = averageScore >= 60 ? isFailed == false ? "불합격" : "합격" : "불합격";
+        
+        // String result = averageScore < 60 ? "불합격" : (kor < 40 || eng < 40 || math < 40) ? "불합격" : "합격";
+        
+        return result;
 	}
 }

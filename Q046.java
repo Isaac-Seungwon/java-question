@@ -29,7 +29,6 @@ public class Q046 {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		// 
 		String korean = "일이삼사오육칠팔구";
 		
 		String result = ""; // 한글 변환 저장

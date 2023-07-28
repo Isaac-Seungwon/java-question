@@ -34,14 +34,12 @@ public class Q034 {
 		*/
 		
 		Scanner scan = new Scanner(System.in);
-		
 		Calendar inputDate = Calendar.getInstance();
 		Calendar weekendDate = Calendar.getInstance();
 		
 		int inputYear;	// 입력 날짜(년)
 		int inputMonth;	// 입력 날짜(월)
 		int inputDay;	// 입력 날짜(일)
-		
 		
 		// 날짜 입력(년)
 		System.out.print("년: ");
@@ -55,15 +53,12 @@ public class Q034 {
 		System.out.print("일: ");
 		inputDay = scan.nextInt();
 		
-		
 		// 입력한 날짜로 초기화
 		inputDate.set(inputYear, inputMonth - 1, inputDay);
 		weekendDate.set(inputYear, inputMonth - 1, inputDay);
-	
 		
 		// 요일, 1(일) ~ 7(토) (메소드 반환값이 Integer라서 숫자로 나온다.)
 		// System.out.println(inputDate.get(Calendar.DAY_OF_WEEK));
-		
 		
 		// 평일, 주말 검증 및 출력
 		if (inputDate.get(Calendar.DAY_OF_WEEK) >= 2 && inputDate.get(Calendar.DAY_OF_WEEK) <= 6) {
@@ -81,5 +76,7 @@ public class Q034 {
 			System.out.println("입력하신 날짜는 '휴일(토/일)'입니다.");
 			System.out.println("결과가 없습니다.");
 		}
+		
+		scan.close();
 	}
 }

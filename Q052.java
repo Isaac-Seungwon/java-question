@@ -53,7 +53,6 @@ public class Q052 {
 		System.out.printf("행: ");
 		num = scan.nextInt();
 		
-		 
 		// 출력
 		for (int i = 1; i <= num; i++) {
 			// stac 초기화

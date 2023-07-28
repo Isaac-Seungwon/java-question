@@ -69,6 +69,7 @@ public class Q023 {
 		
 		// 아빠와 딸의 나이 차이 출력
 		System.out.printf("아빠는 딸보다 총 %d일을 더 살았습니다.\n", gap / 1000 / 60 / 60 / 24); 
-	}
 	
+		scan.close();
+	}
 }

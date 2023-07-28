@@ -26,11 +26,9 @@ public class Q050 {
 		
 		int num; // 행의 개수
 		
-		
 		// 행의 개수 입력
 		System.out.printf("행: ");
 		num = scan.nextInt();
-		
 		
 		// 출력
 		for (int i = 0; i < num; i++) {
