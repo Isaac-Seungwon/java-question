@@ -41,5 +41,7 @@ public class Q061 {
 		for (int i = 4; i > -1; i--) {
 			System.out.printf("nums[%d] = %d\n", i, nums[i]);
 		}
+		
+		scan.close();
 	}
 }

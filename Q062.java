@@ -43,6 +43,9 @@ public class Q062 {
 		// 학생 수 만큼 배열 생성
 		String[] student = new String[studentNum];
 		
+		// 한 사람 입력 후 스페이스바 하고 다시 입력 다 입력 시 엔터
+		// String[] str = scan.nextLine().split(" ");
+		
 		// 학생 이름 입력
 		for (int i = 0; i < student.length; i++) {
 			System.out.printf("학생명: ");
@@ -53,6 +56,7 @@ public class Q062 {
 		Arrays.sort(student);
 		
 		// 학생 이름 출력
+		System.out.printf("입력한 학생은 총 %d명입니다. \n", studentNum);
 		for (int i = 0; i < student.length; i++) {
 			System.out.printf("%d. %s\n", i + 1, student[i]);
 		}

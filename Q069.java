@@ -33,8 +33,8 @@ public class Q069 {
 		
 		// 난수 개수만큼 배열 생성
 		int[] list = new int[number];
-		int[] listPlus = new int[number / 2];
-
+		int[] listPlus = new int[number % 2 == 0 ? number / 2 : number / 2 + 1];
+		
 		// 난수 값 할당 (1~9)
 		for (int i = 0; i < list.length; i++) {
 			list[i] = (int)(Math.random() * 9) + 1;
@@ -45,6 +45,7 @@ public class Q069 {
 			if(number % 2 == 1 && i == list.length - 1){
 				// java.lang.ArrayIndexOutOfBoundsException 오류 발생 방지
 				// 난수 개수가 홀수 && 덧셈할 수 있는 난수가 마지막 1개만 남음
+				listPlus[listPlus.length - 1] = list[list.length - 1];
 				break;
 			}
 			
