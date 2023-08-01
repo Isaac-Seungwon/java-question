@@ -25,8 +25,57 @@ public class Q074 {
 		2
 		*/
 
+		// 데이터 입력 > 문제
 		int[][] nums = new int[5][5];
 
+		int n = 1; // 시작 숫자
+		int stac = nums.length / 2; // 시작 열 인덱스
+		int count = 1; // 중앙에서부터 시작하여 오른쪽으로 증가시킬 숫자 개수
+
+		for (int i = 0; i < nums.length; i++) {
+			for (int j = stac; j < stac + count; j++) {
+				nums[i][j] = n; // 해당 위치에 숫자 채우기
+				n++; // 숫자 증가
+			}
+
+			if (i < nums.length / 2) {
+				stac--; // 중앙으로부터 시작 열 인덱스 왼쪽으로 이동
+				count += 2; // 숫자를 오른쪽으로 증가시킬 개수 늘리기
+			} else {
+				stac++; // 중앙으로부터 시작 열 인덱스 오른쪽으로 이동
+				count -= 2; // 숫자를 오른쪽으로 증가시킬 개수 줄이기
+			}
+		}
+		
+		/*
+		// 다른 방법
+		int[][] nums = new int[5][5];
+		int n = 1;
+
+		for (int i = 0; i < 5; i++) {
+			if (i < 3) {
+				for (int j = 2 - i; j < 3 + i; j++) {
+					nums[i][j] = n;
+					n++;
+				}
+			} else {
+				for (int j = i - 2; j < 7 - i; j++) {
+					nums[i][j] = n;
+					n++;
+				}
+			}
+		}
+		*/
+		
+		// 출력 > 수정 없이 그대로 사용
+		for (int[] row : nums) {
+			for (int num : row) {
+				System.out.printf("%5d", num);
+			}
+			System.out.println();
+		}
+        
+		/*
 		// 데이터 입력 > 문제
 		int n = 1;
 		int stac = nums.length/2 + nums.length%2;
@@ -57,5 +106,6 @@ public class Q074 {
 			}
 			System.out.println();
 		}
+		*/
 	}
 }

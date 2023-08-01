@@ -65,7 +65,7 @@ public class Q060 {
 	*/
 	
 	// 피보나치 수열 계산
-    public static int getFibonacci(int n) {
+    private static int getFibonacci(int n) {
 
     	int result = 0; // 피보나치 수열 계산 결과
     	int num1 = 0; // 이전 항

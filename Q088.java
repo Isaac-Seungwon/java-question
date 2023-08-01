@@ -32,6 +32,7 @@ public class Q088 {
 		
 		String content; // 입력할 문장
 		String[] words = {"바보", "멍청이"}; // 금지어
+		String[] replace = {"", ""}; // 마스킹 '*' 공간 초기화
 		int useWords = 0; // 금지어 사용 횟수
 		
 		// 문장 입력
@@ -40,8 +41,16 @@ public class Q088 {
 
 		// 금지어 마스킹
 		String newContent = content;
-		newContent = newContent.replace("바보", "**");
-		newContent = newContent.replace("멍청이", "***");
+		
+		for (int i=0; i<words.length; i++) {
+			for (int j=0; j<words[i].length(); j++) {
+				// 금지어 글자수 만큼 '*' 입력
+				replace[i] = replace[i] + "*";
+			}
+			
+			// 금지어를 '*'로 마스킹
+			newContent = newContent.replace(words[i], replace[i]);
+		}
 		
 		// 금지어 사용 횟수 계산
 		for (int i=0; i<words.length; i++) {
@@ -53,5 +62,7 @@ public class Q088 {
 		// 금지어 결과 출력
 		System.out.println(newContent);
 		System.out.printf("금지어를 %d회 마스킹했습니다.", useWords);
+		
+		scan.close();
 	}
 }

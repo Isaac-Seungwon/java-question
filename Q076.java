@@ -46,7 +46,7 @@ public class Q076 {
 		for (int i=0; i<10; i++) {
 			for (int j=0; j<3; j++) {
 				if (studentScore[0][j] > 90 - i * 10) {
-					score[i][j] = "  ■";
+					score[i][j] = "■";
 				}
 				else {
 					score[i][j] = " ";
@@ -63,5 +63,7 @@ public class Q076 {
 		}
 		System.out.println("---------------------");
 		System.out.println("국어\t영어\t수학");
+		
+		scan.close();
 	}
 }

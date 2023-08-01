@@ -1,5 +1,7 @@
 package com.test.question;
 
+import java.util.Scanner;
+
 public class Q087 {
 	public static void main(String[] args) {
 		/*
@@ -18,8 +20,27 @@ public class Q087 {
 		결과: Student Name
 		*/
 		
+		Scanner scan = new Scanner(System.in);
 		
+		String compound; // 합성어
+		
+		// 합성어 입력
+		System.out.print("합성어: ");
+		compound = scan.nextLine();
+		
+		for (int i=0; i<compound.length(); i++) {
+			// 입력한 글자를 한 글자씩 검증
+			char c = compound.charAt(i);
+			
+			// 파스칼 표기법에 입각해 대문자를 만나면 띄어쓰기
+			if (i != 0 && c >= 'A' && c <= 'Z') {
+				System.out.print(" ");
+			}
+			
+			// 합성어 출력
+			System.out.print(c);
+		}
+		
+		scan.close();
 	}
-	
-	
 }

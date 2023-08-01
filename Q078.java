@@ -23,7 +23,35 @@ public class Q078 {
 		ㄴ패턴: 4,3 4,2 4,1 4,0
 		ㄴ패턴: 3,0 2,0 1,0
 		*/
+
+		int[][] nums = new int[6][6];
+		int n = 1;
+		int a = 0, b = -1;
+		int turn = 0;
+
+		for (int i = nums.length; i > 0; i--) {
+			int num = i * 2 - 1;
+
+			for (int j = 0; j < num; j++) {
+				if (turn % 2 == 0) {
+					if (b < nums.length - 1 - turn / 2)
+						b++;
+					else
+						a++;
+				} else {
+					if (b > turn / 2)
+						b--;
+					else
+						a--;
+				}
+				nums[a][b] = n;
+				n++;
+			}
+			turn++;
+		}
 		
+		/*
+		// 다른 방법
 		int[][] nums = new int[5][5];
         int n = 1;
 
@@ -54,6 +82,7 @@ public class Q078 {
             }
             left++;
         }
+        */
         
         // 출력 > 수정 없이 그대로 사용
  		for (int i=0; i<5; i++) {

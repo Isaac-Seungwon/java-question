@@ -62,5 +62,7 @@ public class Q068 {
 		// 출력
 		System.out.printf("원본: %s\n", Arrays.toString(copy));
 		System.out.printf("결과: %s\n", Arrays.toString(list));
+		
+		scan.close();
 	}
 }

@@ -21,8 +21,6 @@ public class Q080 {
 		역순 결과 : ".다니입동길홍 .요세하녕안"
 		*/
 		
-		// 글자를 끝에서부터 하나씩 추출 - charAt 또는 substring
-		
 		Scanner scan = new Scanner(System.in);
 		
 		// 문장 입력

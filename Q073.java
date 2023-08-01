@@ -12,8 +12,6 @@ public class Q073 {
 		10	11	12	0	0
 		13	14	0	0	0
 		15	0	0	0	0
-		
-		
 		*/
 		
 		int[][] nums = new int[5][5];

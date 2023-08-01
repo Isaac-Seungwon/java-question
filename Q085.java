@@ -69,6 +69,8 @@ public class Q085 {
 			System.out.println("올바르지 않은 주민등록번호입니다.");
 		}
 		
+		scan.close();
+		
 		// System.out.println(pass);
 		// System.out.println(Integer.parseInt(jumin.substring(12, 13)));
 		

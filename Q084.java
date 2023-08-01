@@ -15,15 +15,22 @@ public class Q084 {
 		● 출력
 		'길동'을 총 2회 발견했습니다.
 		*/
-		
+
 		Scanner scan = new Scanner(System.in);
-		
+
 		String content = "안녕~ 길동아~ 잘가~ 길동아~"; // 대상 문자열
 		String word = "길동"; // 검색 문자열
-		
+
 		int sum = 0; // 발견 횟수
 		int index = 0;
-		
+
+		while ((index = content.indexOf(word, index)) != -1) {
+			sum++;
+			index += word.length(); // word 글자 수
+		}
+
+		/*
+		// 다른 방법
 		while (true) {
 			index = content.indexOf(word, index);
 			
@@ -34,6 +41,7 @@ public class Q084 {
 			}
 			index += 2; // word 글자 수
 		}
+		*/
 		
 		// 출력
 		System.out.printf("'%s'을 총 %d회 발견했습니다.", word, sum);
