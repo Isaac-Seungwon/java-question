@@ -19,7 +19,9 @@ class Employee {
 			+ "부서: " + this.department + "\n"
 			+ "직위: " + this.position + "\n"
 			+ "연락처: " + this.tel + "\n"
-			+ "직속상사: " + (this.boss == null ? "없음" : (this.boss.getName() + "(" + this.boss.getDepartment()) + ")") + "\n";
+			+ "직속상사: " + (this.boss == null ?
+					"없음" : (this.boss.getName() + "(" + this.boss.getDepartment() + " " + this.boss.getPosition() + ")"))
+			+ "\n";
 		
 		System.out.println(txt);
 	}
