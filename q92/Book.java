@@ -2,7 +2,6 @@ package com.test.question.q92;
 
 import java.text.DecimalFormat;
 
-
 public class Book {
 	// DecimalFormat: 숫자를 원하는 형식으로 포맷팅하는데 사용하는 클래스
 	DecimalFormat formatter = new DecimalFormat("###,###");
@@ -37,7 +36,7 @@ public class Book {
 	// 제목: 최대 50자 이내(한글, 영어, 숫자, 공백)
 	public void setTitle(String title) {
 		if (title.length() <= 50) {
-            // 정규표현식을 활용하여 문자열 유효성 검사
+			// 정규표현식을 활용하여 문자열 유효성 검사
 			/*
 			문자열이 한글, 영어 대소문자, 숫자, 공백 문자로만 구성되어 있는지 검증
 			[가-힣]: 한글 유니코드 범위, 한글 글자들을 포함
@@ -50,6 +49,7 @@ public class Book {
                 this.title = title;
             }
         }
+		
 		/*
 		// 다른 방법
 		if (title.length() <= 50) {

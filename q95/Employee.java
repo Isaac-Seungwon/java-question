@@ -32,7 +32,7 @@ class Employee {
 
 	public void setName(String name) {
 		// 한글 2~5자 이내
-		if (name.length() >= 2 && name.length() <= 5 && name.matches("[가-힣]*")) {
+		if (name.length() >= 2 && name.length() <= 5 && name.matches("^[가-힣]*$")) {
             this.name = name;
         }
 	}
@@ -101,9 +101,11 @@ class Employee {
 		if (boss == null) {
 			return;
 		}
+		
 		if (this.name.equals(boss.getName()) && this.department.equals(boss.getDepartment()) && this.position.equals(boss.getPosition()) && this.tel.equals(boss.getTel())) {
 			return;
 		}
+		
 		if (!this.department.equals(boss.getDepartment())) {
 			return;
 		}

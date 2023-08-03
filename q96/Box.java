@@ -16,7 +16,7 @@ class Box {
 			
 			macaron.setSize(random.nextInt(11) + 5); // 5~15 사이의 크기
 			macaron.setColor(colorList[random.nextInt(colorList.length)]); // colorList 배열의 랜덤한 색상
-			macaron.setThickness(random.nextInt(20) + 1); // // 1~20 사이의 두께
+			macaron.setThickness(random.nextInt(20) + 1); // 1~20 사이의 두께
 			
 			this.list[i] = macaron; // 생성한 마카롱을 배열에 저장
 		}
@@ -27,7 +27,7 @@ class Box {
 	// 마카롱 배열을 검사하고 합격과 불합격 개수를 출력
 	public void check() {
 		int pass = 0;
-		int failed = 0;
+		int fail = 0;
 		
 		for (int i=0; i<list.length; i++) {
 			Macaron macaron = this.list[i];
@@ -35,13 +35,13 @@ class Box {
 			if (check(macaron)) {
 				pass++; // 합격 개수 증가
 			} else {
-				failed++; // 불합격 개수 증가
+				fail++; // 불합격 개수 증가
 			}
 		}
 		
 		System.out.println("[박스 체크 결과]");
 		System.out.printf("QC 합격 개수 : %d개\n", pass);
-		System.out.printf("QC 불합격 개수 : %d개\n", failed);
+		System.out.printf("QC 불합격 개수 : %d개\n", fail);
 		System.out.println();
 	}
 
@@ -65,7 +65,7 @@ class Box {
         
 		if ((macaronSize < 8 || macaronSize > 14)
 			|| macaronColor.equals("black")
-			|| (macaronThickness < 2 || macaronThickness > 18)) {
+			|| (macaronThickness < 3 || macaronThickness > 18)) {
 			return false;
 		}
 		
