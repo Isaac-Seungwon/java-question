@@ -1,6 +1,6 @@
 package com.test.question.q100;
 
-class Pencil {
+class Pencil implements Product {
 	private String hardness;
 	
 	public String getHardness() {
@@ -11,6 +11,7 @@ class Pencil {
 		this.hardness = hardness;
 	}
 	
+	@Override
 	public String info() {
 		return String.format("%s 진하기 연필", this.hardness);
 	}

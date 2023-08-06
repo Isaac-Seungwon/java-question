@@ -13,7 +13,7 @@ public class Note {
 	private int priceSum = 0;
 	private String thickness;
 	
-	// 덤프 메소드
+	// 덤프 메소드 (노트 정보 출력 메소드)
 	public String info() {
 		// 문자열(null)
 		// null은 객체가 아니다
@@ -22,7 +22,7 @@ public class Note {
 		// 문자열("")
 		// if (owner.equals("")) > 메소드 사용 > 값 비교
 		
-		// 화면 출력
+		// 소유자 정보에 따라 출력
 		if (this.owner != null) {
             return String.format("■■■■■■ 노트 정보 ■■■■■■\n"
                     + "소유자: %s\n"

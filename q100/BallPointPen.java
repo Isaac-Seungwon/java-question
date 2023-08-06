@@ -1,6 +1,6 @@
 package com.test.question.q100;
 
-class BallPointPen {
+class BallPointPen implements Product {
 	private double thickness;
 	private String color;
 	
@@ -20,6 +20,7 @@ class BallPointPen {
 		this.color = color;
 	}
 
+	@Override
 	public String info() {
 		return String.format("%s 색상 %.1fmm 볼펜", this.color, this.thickness);
 	}

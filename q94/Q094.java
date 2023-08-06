@@ -78,7 +78,7 @@ public class Q094 {
 		System.out.println("유통 기한이 " + snack.getExpiration() + "일 남았습니다.");
 		
 		snack.eat();
-		
+
 		
 		Bugles snack2 = new Bugles();
 		

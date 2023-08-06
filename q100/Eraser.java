@@ -1,6 +1,6 @@
 package com.test.question.q100;
 
-class Eraser {
+class Eraser implements Product {
 	private String size;
 	
 	public String getSize() {
@@ -11,6 +11,7 @@ class Eraser {
 		this.size = size;
 	}
 
+	@Override
 	public String info() {
 		return String.format("%s 사이즈 지우개", this.size);
 	}
